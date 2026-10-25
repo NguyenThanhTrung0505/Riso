@@ -3,42 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#fff8f3">
+  <meta name="theme-color" content="#FFF8F2">
   <meta name="description" content="Một góc nhỏ dịu dàng được làm riêng để cậu nghỉ ngơi, mỉm cười và cảm nhận mình luôn được quan tâm.">
   <meta property="og:title" content="A Little Corner of Happiness">
   <meta property="og:description" content="Một món quà nhỏ dành riêng cho cậu.">
   <meta property="og:type" content="website">
   <title>A Little Corner of Happiness</title>
   <link rel="icon" href="assets/icons/heart.svg" type="image/svg+xml">
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/data.js" defer></script>
   <script src="js/app.js" defer></script>
 </head>
 <body>
+  <!-- Ambient background orbs -->
   <div class="ambient ambient-one" aria-hidden="true"></div>
   <div class="ambient ambient-two" aria-hidden="true"></div>
 
   <main>
+    <!-- ══ WELCOME SCREEN ══════════════════════════════════ -->
     <section class="welcome-screen" id="welcome-screen" aria-labelledby="welcome-title">
-      <div class="welcome-stars" aria-hidden="true"><span>✦</span><span>·</span><span>♡</span><span>✧</span></div>
+      <!-- Floating decorative stars -->
+      <div class="welcome-stars" aria-hidden="true">
+        <span>✦</span>
+        <span>·</span>
+        <span>♡</span>
+        <span>✧</span>
+        <span>✦</span>
+        <span>·</span>
+      </div>
+
       <p class="eyebrow">MỘT MÓN QUÀ NHỎ</p>
+
+      <!-- Envelope illustration -->
       <div class="envelope-art" aria-hidden="true">
         <span class="envelope-heart">♡</span>
         <span class="envelope-sparkle sparkle-a">✦</span>
         <span class="envelope-sparkle sparkle-b">✧</span>
       </div>
+
       <h1 id="welcome-title">Có một nơi nhỏ xíu<br>được làm riêng cho cậu.</h1>
       <p class="welcome-copy" id="welcome-copy">Để cậu có thể nghỉ chân một chút, bất cứ khi nào cần.</p>
-      <button class="button button-primary button-large" id="open-gift" type="button">Mở món quà của cậu <span aria-hidden="true">💗</span></button>
+
+      <button class="button button-primary button-large" id="open-gift" type="button">
+        Mở món quà của cậu <span aria-hidden="true">💗</span>
+      </button>
+
       <p class="welcome-signature" id="welcome-signature"></p>
       <button class="text-button skip-button" id="skip-welcome" type="button">Bỏ qua hiệu ứng</button>
     </section>
 
+    <!-- ══ APP SHELL ════════════════════════════════════════ -->
     <div class="app-shell" id="app-shell" hidden>
-      <header class="site-header">
+
+      <header class="site-header" id="site-header">
         <a class="brand" href="#home" aria-label="Về trang chủ">
           <span class="brand-mark" aria-hidden="true">♡</span>
           <span>A little corner <small>of happiness</small></span>
@@ -46,55 +67,90 @@
         <button class="icon-button settings-trigger" type="button" data-open="settings" aria-label="Tùy chọn">⚙</button>
       </header>
 
+      <!-- ── HERO ─────────────────────────────────────────── -->
       <section class="hero panel" id="home" aria-labelledby="greeting-title">
         <div class="hero-content">
           <p class="eyebrow" id="today-label"></p>
           <h2 id="greeting-title">Chào buổi sáng, <span data-recipient>cậu</span> <span aria-hidden="true">🌷</span></h2>
           <p class="hero-quote" id="daily-quote"></p>
-          <button class="button button-soft" type="button" data-open="mood">Hôm nay cậu thế nào? <span aria-hidden="true">↗</span></button>
+          <button class="button button-soft" type="button" data-open="mood">
+            Hôm nay cậu thế nào? <span aria-hidden="true">↗</span>
+          </button>
         </div>
         <div class="mascot" id="mascot" role="img" aria-label="Một cục bông nhỏ đang mỉm cười">
-          <span class="mascot-face">ᵔᴗᵔ</span><span class="mascot-blush">●　●</span>
+          <span class="mascot-face">ᵔᴗᵔ</span>
+          <span class="mascot-blush">●　●</span>
           <span class="mascot-flower" aria-hidden="true">✿</span>
         </div>
         <span class="hero-decoration decor-heart" aria-hidden="true">♡</span>
         <span class="hero-decoration decor-sparkle" aria-hidden="true">✦</span>
       </section>
 
+      <!-- ── FEATURE GRID ──────────────────────────────────── -->
       <section class="section-block" aria-labelledby="today-heading">
         <div class="section-heading">
-          <div><p class="eyebrow">CHỌN THEO TÂM TRẠNG</p><h2 id="today-heading">Cậu muốn ghé đâu? <span aria-hidden="true">☁️</span></h2></div>
+          <div>
+            <p class="eyebrow">CHỌN THEO TÂM TRẠNG</p>
+            <h2 id="today-heading">Cậu muốn ghé đâu? <span aria-hidden="true">☁️</span></h2>
+          </div>
         </div>
         <div class="feature-grid">
           <button class="feature-card card-notes" type="button" data-open="notes">
-            <span class="feature-icon" aria-hidden="true">💌</span><span class="feature-title">Một lời nhắn nhỏ</span><span class="feature-desc">Mở một chiếc thư dành riêng cho cậu.</span><span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="feature-icon" aria-hidden="true">💌</span>
+            <span class="feature-title">Một lời nhắn nhỏ</span>
+            <span class="feature-desc">Mở một chiếc thư dành riêng cho cậu.</span>
+            <span class="card-arrow" aria-hidden="true">↗</span>
           </button>
           <button class="feature-card card-hug" type="button" data-open="hug">
-            <span class="feature-icon" aria-hidden="true">🫂</span><span class="feature-title">Một cái ôm dành cho cậu</span><span class="feature-desc">Không cần nói gì cũng được.</span><span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="feature-icon" aria-hidden="true">🫂</span>
+            <span class="feature-title">Một cái ôm dành cho cậu</span>
+            <span class="feature-desc">Không cần nói gì cũng được.</span>
+            <span class="card-arrow" aria-hidden="true">↗</span>
           </button>
           <button class="feature-card card-games" type="button" data-open="games">
-            <span class="feature-icon" aria-hidden="true">🎮</span><span class="feature-title">Chơi một chút nhé</span><span class="feature-desc">Bốn trò nhỏ, không có điểm số áp lực.</span><span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="feature-icon" aria-hidden="true">🎮</span>
+            <span class="feature-title">Chơi một chút nhé</span>
+            <span class="feature-desc">Bốn trò nhỏ, không có điểm số áp lực.</span>
+            <span class="card-arrow" aria-hidden="true">↗</span>
           </button>
           <button class="feature-card card-garden" type="button" data-open="garden">
-            <span class="feature-icon" aria-hidden="true">🌱</span><span class="feature-title">Khu vườn cảm xúc</span><span class="feature-desc">Chăm chút một góc xanh của riêng cậu.</span><span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="feature-icon" aria-hidden="true">🌱</span>
+            <span class="feature-title">Khu vườn cảm xúc</span>
+            <span class="feature-desc">Chăm chút một góc xanh của riêng cậu.</span>
+            <span class="card-arrow" aria-hidden="true">↗</span>
           </button>
           <button class="feature-card card-memories" type="button" data-open="memories">
-            <span class="feature-icon" aria-hidden="true">📸</span><span class="feature-title">Góc kỷ niệm</span><span class="feature-desc">Những khoảng trống chờ câu chuyện của mình.</span><span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="feature-icon" aria-hidden="true">📸</span>
+            <span class="feature-title">Góc kỷ niệm</span>
+            <span class="feature-desc">Những khoảng trống chờ câu chuyện của mình.</span>
+            <span class="card-arrow" aria-hidden="true">↗</span>
           </button>
           <button class="feature-card card-music" type="button" data-open="music">
-            <span class="feature-icon" aria-hidden="true">🎵</span><span class="feature-title">Nghe một chút dịu dàng</span><span class="feature-desc">Một chiếc máy nghe nhạc nho nhỏ.</span><span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="feature-icon" aria-hidden="true">🎵</span>
+            <span class="feature-title">Nghe một chút dịu dàng</span>
+            <span class="feature-desc">Một chiếc máy nghe nhạc nho nhỏ.</span>
+            <span class="card-arrow" aria-hidden="true">↗</span>
           </button>
         </div>
       </section>
 
+      <!-- ── LOWER TEASERS ─────────────────────────────────── -->
       <section class="section-block lower-grid" aria-label="Những điều nhỏ xinh">
         <article class="wish-teaser panel">
-          <div><p class="eyebrow">GỬI ĐIỀU ƯỚC LÊN TRỜI</p><h2>Điều ước hôm nay <span aria-hidden="true">⭐</span></h2><p>Một mong muốn nhỏ cũng xứng đáng được lắng nghe.</p></div>
+          <div>
+            <p class="eyebrow">GỬI ĐIỀU ƯỚC LÊN TRỜI</p>
+            <h2>Điều ước hôm nay <span aria-hidden="true">⭐</span></h2>
+            <p>Một mong muốn nhỏ cũng xứng đáng được lắng nghe.</p>
+          </div>
           <button class="button button-soft" type="button" data-open="wishes">Viết điều ước <span aria-hidden="true">↗</span></button>
         </article>
         <article class="gift-teaser panel">
           <span class="gift-emoji" aria-hidden="true">🎁</span>
-          <div><p class="eyebrow">CÓ GÌ Ở BÊN TRONG?</p><h2>Một bất ngờ nho nhỏ</h2><p>Chọn một chiếc hộp để khám phá.</p></div>
+          <div>
+            <p class="eyebrow">CÓ GÌ Ở BÊN TRONG?</p>
+            <h2>Một bất ngờ nho nhỏ</h2>
+            <p>Chọn một chiếc hộp để khám phá.</p>
+          </div>
           <button class="button button-soft" type="button" data-open="gifts">Mở quà <span aria-hidden="true">↗</span></button>
         </article>
       </section>
@@ -103,23 +159,35 @@
         <p>Được làm bằng sự dịu dàng, dành cho <span data-recipient>cậu</span> <span aria-hidden="true">♡</span></p>
         <button class="text-button" type="button" data-open="card">Tạo một tấm thiệp</button>
       </footer>
-    </div>
+    </div><!-- /.app-shell -->
   </main>
 
+  <!-- ══ BOTTOM NAVIGATION ════════════════════════════════ -->
   <nav class="bottom-nav" id="bottom-nav" aria-label="Điều hướng nhanh" hidden>
-    <button type="button" class="nav-item is-active" data-open="home"><span aria-hidden="true">⌂</span><small>Nhà</small></button>
-    <button type="button" class="nav-item" data-open="notes"><span aria-hidden="true">♡</span><small>Lời nhắn</small></button>
-    <button type="button" class="nav-item" data-open="games"><span aria-hidden="true">✿</span><small>Chơi</small></button>
-    <button type="button" class="nav-item" data-open="garden"><span aria-hidden="true">☘</span><small>Vườn</small></button>
+    <button type="button" class="nav-item is-active" data-open="home">
+      <span aria-hidden="true">⌂</span><small>Nhà</small>
+    </button>
+    <button type="button" class="nav-item" data-open="notes">
+      <span aria-hidden="true">♡</span><small>Lời nhắn</small>
+    </button>
+    <button type="button" class="nav-item" data-open="games">
+      <span aria-hidden="true">✿</span><small>Chơi</small>
+    </button>
+    <button type="button" class="nav-item" data-open="garden">
+      <span aria-hidden="true">☘</span><small>Vườn</small>
+    </button>
   </nav>
 
+  <!-- ══ FEATURE DIALOG ═══════════════════════════════════ -->
   <dialog class="feature-dialog" id="feature-dialog" aria-labelledby="dialog-title">
     <div class="dialog-topbar">
       <p class="dialog-kicker" id="dialog-kicker"></p>
-      <button class="icon-button dialog-close" type="button" aria-label="Đóng">×</button>
+      <button class="dialog-close" type="button" aria-label="Đóng">×</button>
     </div>
     <div class="dialog-content" id="dialog-content"></div>
   </dialog>
+
+  <!-- ══ TOAST REGION ═════════════════════════════════════ -->
   <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
 </body>
 </html>
